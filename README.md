@@ -1,4 +1,12 @@
-This repository is a hands-on implementation for DNS full resolver implements.
+This repository is a hands-on implementation for DNS full resolver implements with golang.
+
+This hands-on sample implementation as follow DNS features
+- DNS Query handling
+- Iterative search
+- Query Cache
+- Nameserver cache
+
+Please use it for free research during summer vacation.
 
 ## step0 
 step0 is an implementation of a DNS server that does nothing.
