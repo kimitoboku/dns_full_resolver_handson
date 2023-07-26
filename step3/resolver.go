@@ -104,11 +104,6 @@ func (f *FullResolver) IterativeSearch(qname string, qtype uint16) *dns.Msg {
 				f.dataCache.Add(qname, qtype, *resp)
 				return resp
 			}
-			// TODO: comドメインのCacheがある時にnetドメインを引いた時に無限ループする問題をなおす
-			// netのcacheがある状態で e.gtld-servers.net.の名前解決をやろうとする
-			// Root NSの場合だけAレコードもCacheしてあげた方が良い？
-			// DNSのCacheの方法についてもうちょっと、考える
-			// 無限ループは結構しがち
 			f.AddNsCache(resp)
 			nameservers, hasIpAddr := f.getNameServer(resp)
 			if hasIpAddr {
