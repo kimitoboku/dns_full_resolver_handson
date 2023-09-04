@@ -24,3 +24,7 @@ The DNS server cache user query data response.
 ## step3
 step3 is implementation of nameserver cache
 The DNS server cache NS record until iterative search.
+
+## step4
+step4 is implementation of CNAME.
+The DNS server need iterative search agent and response concat.
